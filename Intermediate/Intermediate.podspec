@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.source       = { :http => "https://example.com/intermediate" }
   s.source_files  = "Intermediate", "Intermediate/**/*.{h,m}"
 
-  s.dependency 'AMCoreAudio', '1.1'
+  s.dependency 'AMCoreAudio', '< 2'
 end
