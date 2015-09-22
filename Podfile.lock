@@ -1,0 +1,17 @@
+PODS:
+  - AMCoreAudio (1.1)
+  - Intermediate (0.1.0):
+    - AMCoreAudio (= 1.1)
+
+DEPENDENCIES:
+  - Intermediate (from `Intermediate/Intermediate.podspec`)
+
+EXTERNAL SOURCES:
+  Intermediate:
+    :path: Intermediate/Intermediate.podspec
+
+SPEC CHECKSUMS:
+  AMCoreAudio: 828032aaa0fe946e71ec818de3cf68c132262486
+  Intermediate: 5035f01afdadaff55d90e3004184f69c1d609396
+
+COCOAPODS: 0.39.0.beta.4
