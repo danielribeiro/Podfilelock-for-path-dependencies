@@ -15,11 +15,11 @@ $ ./build.sh
 
 ## The bug
 
-The Podfile.lock clearly states the dependency "AMCoreAudio (1.1)", but if you `pod install`, it will change the podfile lock to point to "AMCoreAudio (1.5)". This happens because the strict dependecy on Intermediate.podspec changed from '1.1' to '< 2'. 
+The Podfile.lock clearly states the dependency "AMCoreAudio (1.1)", but if you `pod install`, it will change the Podfile.lock to point to "AMCoreAudio (1.5)". This happens because the strict dependecy on Intermediate.podspec changed from '1.1' to '< 2'. 
 
-The bug is: if this was not a path dependency, the podfile lock would be respected.
+The bug is: if this was not a path dependency, the Podfile.lock would be respected.
 
-Commenting the [line 406 on analyzer.rb](https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/installer/analyzer.rb#L406) avoids this behaviour. This way, if you need to update the podfile.lock, you run `pod update`.
+Commenting the [line 406 on analyzer.rb](https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/installer/analyzer.rb#L406) avoids this behaviour. This way, if you need to update the Podfile.lock, you run `pod update`.
 
 # Meta
 
