@@ -1,6 +1,6 @@
 # Podfile.lock For Path Dependencies
 
-This exemplifies https://github.com/CocoaPods/CocoaPods/issues/4211
+Sample project for this [CocoaPods](https://github.com/CocoaPods/CocoaPods) issue: https://github.com/CocoaPods/CocoaPods/issues/4211
 
 The architecture is described here:
 
@@ -12,12 +12,11 @@ To run it just execute build.sh:
 $ ./build.sh
 ```
 
-
 ## The bug
 
 The Podfile.lock clearly states the dependency "AMCoreAudio (1.1)", but if you `pod install`, it will change the Podfile.lock to point to "AMCoreAudio (1.5)". This happens because the strict dependecy on Intermediate.podspec changed from '1.1' to '< 2'. 
 
-The bug is: if this was not a path dependency, the Podfile.lock would be respected.
+**The bug is:** if this was not a path dependency, the Podfile.lock would be respected.
 
 Commenting the [line 406 on analyzer.rb](https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/installer/analyzer.rb#L406) avoids this behaviour. This way, if you need to update the Podfile.lock, you run `pod update`.
 
