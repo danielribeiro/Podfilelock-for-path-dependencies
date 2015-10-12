@@ -18,7 +18,7 @@ The Podfile.lock clearly states the dependency "AMCoreAudio (1.1)", but if you `
 
 **The bug is:** if this was not a path dependency, the Podfile.lock would be respected.
 
-Commenting the [line 406 on analyzer.rb](https://github.com/CocoaPods/CocoaPods/blob/master/lib/cocoapods/installer/analyzer.rb#L406) avoids this behaviour. This way, if you need to update the Podfile.lock, you run `pod update`.
+Commenting [this line on analyzer.rb](https://github.com/CocoaPods/CocoaPods/blob/437c0b30bfa5c54cca1edf282582bbd49e5786c9/lib/cocoapods/installer/analyzer.rb#L406) avoids this behaviour. This way, if you need to update the Podfile.lock, you run `pod update`.
 
 # Meta
 
