@@ -2,7 +2,7 @@
 
 Sample project for this [CocoaPods](https://github.com/CocoaPods/CocoaPods) issue: https://github.com/CocoaPods/CocoaPods/issues/4211
 
-The architecture is described here:
+The project/pods dependency graph is:
 
 ![](https://raw.githubusercontent.com/danielribeiro/Podfilelock-for-path-dependencies/master/docs/arch.png)
 
